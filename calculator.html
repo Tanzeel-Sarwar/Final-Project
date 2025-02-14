@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - Smart Tools Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="modern-header">
+        <nav>
+            <div class="nav-left">
+                <div class="dropdown">
+                    <button class="dropbtn">Tools <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="calculator.html">Calculator</a>
+                        <a href="todo.html">To-Do List</a>
+                        <a href="notes.html">Notes</a>
+                        <a href="polling.html">Polling System</a>
+                    </div>
+                </div>
+                <a href="/" class="logo">Smart Tools Hub</a>
+            </div>
+            <div class="nav-right">
+                <h2>Calculator</h2>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="calculator-container">
+            <div id="calculator" class="modern-calculator">
+                <div class="calc-display">
+                    <div id="calculation" class="calculation"></div>
+                    <input type="text" id="display" readonly>
+                </div>
+                <div class="calc-buttons">
+                    <button class="calc-btn operator" onclick="clearDisplay()">C</button>
+                    <button class="calc-btn operator" onclick="appendToDisplay('(')">(</button>
+                    <button class="calc-btn operator" onclick="appendToDisplay(')')">)</button>
+                    <button class="calc-btn operator" onclick="appendToDisplay('/')">/</button>
+                    <button class="calc-btn" onclick="appendToDisplay('7')">7</button>
+                    <button class="calc-btn" onclick="appendToDisplay('8')">8</button>
+                    <button class="calc-btn" onclick="appendToDisplay('9')">9</button>
+                    <button class="calc-btn operator" onclick="appendToDisplay('*')">×</button>
+                    <button class="calc-btn" onclick="appendToDisplay('4')">4</button>
+                    <button class="calc-btn" onclick="appendToDisplay('5')">5</button>
+                    <button class="calc-btn" onclick="appendToDisplay('6')">6</button>
+                    <button class="calc-btn operator" onclick="appendToDisplay('-')">-</button>
+                    <button class="calc-btn" onclick="appendToDisplay('1')">1</button>
+                    <button class="calc-btn" onclick="appendToDisplay('2')">2</button>
+                    <button class="calc-btn" onclick="appendToDisplay('3')">3</button>
+                    <button class="calc-btn operator" onclick="appendToDisplay('+')">+</button>
+                    <button class="calc-btn" onclick="appendToDisplay('0')">0</button>
+                    <button class="calc-btn" onclick="appendToDisplay('.')">.</button>
+                    <button class="calc-btn" onclick="backspace()">⌫</button>
+                    <button class="calc-btn operator" onclick="calculate()">=</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="calculator.js"></script>
+</body>
+</html>
+

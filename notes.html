@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes - Smart Tools Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="notes-page">
+    <header class="modern-header">
+        <nav>
+            <div class="nav-left">
+                <a href="/" style="text-decoration: none;">
+                    <div class="logo">Smart Tools Hub</div>
+                </a>
+                <div class="dropdown">
+                    <button class="dropbtn">Tools <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="calculator.html">Calculator</a>
+                        <a href="todo.html">To-Do List</a>
+                        <a href="notes.html">Notes</a>
+                        <a href="polling.html">Polling System</a>
+                    </div>
+                </div>
+            </div>
+            <button id="add-note-btn" class="add-btn">
+                <i class="fas fa-plus"></i>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <div class="notes-container">
+            <div id="note-form-container" class="note-form-container hidden">
+                <form id="notes-form">
+                    <input type="text" id="note-title" placeholder="Note title" required>
+                    <textarea id="note-content" placeholder="Type your note here..." required></textarea>
+                    <input type="text" id="note-user" placeholder="Your name" required>
+                    <div class="form-actions">
+                        <button type="button" id="cancel-note" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="save-btn">Save Note</button>
+                    </div>
+                </form>
+            </div>
+            <div id="notes-grid"></div>
+        </div>
+    </main>
+    <script src="notifications.js"></script>
+    <script src="notes.js"></script>
+    <script src="page-title.js"></script>
+</body>
+</html>
+

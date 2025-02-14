@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Polling - Smart Tools Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="polling-page">
+    <header class="modern-header">
+        <nav>
+            <div class="nav-left">
+                <div class="logo">Polling System</div>
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search polls...">
+                </div>
+            </div>
+            <button id="create-poll-btn" class="add-btn">
+                <i class="fas fa-plus"></i>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <div class="polling-container">
+            <div id="poll-form-container" class="poll-form-container hidden">
+                <form id="poll-form">
+                    <input type="text" id="poll-question" placeholder="Enter your question" required>
+                    <div id="options-container">
+                        <input type="text" class="poll-option" placeholder="Option 1" required>
+                        <input type="text" class="poll-option" placeholder="Option 2" required>
+                    </div>
+                    <button type="button" id="add-option-btn" class="secondary-btn">Add Option</button>
+                    <div class="form-actions">
+                        <button type="button" id="cancel-poll" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="save-btn">Create Poll</button>
+                    </div>
+                </form>
+            </div>
+            <div id="polls-list" class="polls-list"></div>
+        </div>
+    </main>
+    <script src="polling.js"></script>
+</body>
+</html>
+

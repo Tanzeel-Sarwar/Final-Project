@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List - Smart Tools Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="todo-page">
+    <header class="modern-header">
+        <nav>
+            <div class="nav-left">
+                <a href="/" style="text-decoration: none;">
+                    <div class="logo">Smart Tools Hub</div>
+                </a>
+                <div class="dropdown">
+                    <button class="dropbtn">Tools <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="calculator.html">Calculator</a>
+                        <a href="todo.html">To-Do List</a>
+                        <a href="notes.html">Notes</a>
+                        <a href="polling.html">Polling System</a>
+                    </div>
+                </div>
+            </div>
+            <button id="add-task-btn" class="add-btn">
+                <i class="fas fa-plus"></i>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <div class="todo-container">
+            <div id="task-form-container" class="task-form-container hidden">
+                <form id="todo-form">
+                    <input type="text" id="task-input" placeholder="Task title" required>
+                    <input type="text" id="user-name" placeholder="Assigned to" required>
+                    <input type="date" id="due-date" required>
+                    <select id="priority" required>
+                        <option value="low">Low Priority</option>
+                        <option value="medium">Medium Priority</option>
+                        <option value="high">High Priority</option>
+                    </select>
+                    <div class="form-actions">
+                        <button type="button" id="cancel-task" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="save-btn">Add Task</button>
+                    </div>
+                </form>
+            </div>
+            <div id="tasks-list" class="modern-tasks-list"></div>
+        </div>
+    </main>
+    <script src="notifications.js"></script>
+    <script src="todo.js"></script>
+    <script src="page-title.js"></script>
+</body>
+</html>
+
